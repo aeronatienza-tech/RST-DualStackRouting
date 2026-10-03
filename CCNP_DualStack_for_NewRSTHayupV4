@@ -2160,20 +2160,20 @@ Its a disaster, learn by Mistakes!!! playtime.
 
 Bring it back to all normal:
 r1:
-config t
-no access-list 51
-no access-list 52
-no access-list 53
-no access-list 54
-no route-map ISP2for5152 permit 10
-no route-map ISP2for5152 permit 20
-route-map ISP3for5354 permit 10
-route-map ISP3for5354 permit 20
-router bgp 1
- no neighbor 207.7.7.2 route-map ISP2for5152 in
- no neighbor 209.9.9.3 route-map ISP3for5354 in
-end
-clear ip bgp * soft
+	config t
+	no access-list 51
+	no access-list 52
+	no access-list 53
+	no access-list 54
+	no route-map ISP2for5152 permit 10
+	no route-map ISP2for5152 permit 20
+	route-map ISP3for5354 permit 10
+	route-map ISP3for5354 permit 20
+	router bgp 1
+	 no neighbor 207.7.7.2 route-map ISP2for5152 in
+	 no neighbor 209.9.9.3 route-map ISP3for5354 in
+	end
+	clear ip bgp * soft
 
 
 
@@ -2434,7 +2434,7 @@ route-map LP1 permit 30
  match ip address 43
   set local-pref 433
 route-map LP1 Deny 45
- match ip address 43
+ match ip address 45
 route-map LP1 Permit 50
 !
 route-map LP1 Permit 40
