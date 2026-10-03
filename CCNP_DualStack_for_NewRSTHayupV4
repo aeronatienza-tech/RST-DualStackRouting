@@ -1379,9 +1379,9 @@ D   FEC0::11:0/122 [90/409600]
 
 	config t
 	ipv6 unicast-routing
-	ipv6 route ::/0 10:2:1:12::2
+	ipv6 route ::/0 10:2:2:12::2
 	int e1/0
-		ipv6 address 10:2:1:12::/64 eui-64
+		ipv6 address 10:2:2:12::/64 eui-64
 		end
 	bp6
 	!wait few secs. and see to it na yung mac ginawang ipv6-ish, get it then ping kay P1
@@ -1464,7 +1464,7 @@ EX  FEC0:3::3/128 [170/332800]
 		!!! ni-route lang kay ipv6 ni VLAN 10, bp6 kay D1 para mahanap.
 @P2
 	conf t
-		ipv6 route ::/0 10:2:1:12::2
+		ipv6 route ::/0 10:2:2:12::2
 		end
 
 ping 8:8:8:8::8888
